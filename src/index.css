@@ -1,0 +1,128 @@
+body{
+  margin: 0px;
+  background: linear-gradient(135deg, #acb2b7 0%, #0d0e0f 100%);
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.column {
+  flex: 1;
+   max-width:300px;;
+  min-height: 300px;
+  background: #7c7c941d;
+  backdrop-filter:blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow:10px 10px 50px 2px rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 1.5rem;
+  transition: transform 2s ease, box-shadow 2s ease;
+}
+.column:hover{
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgb(255, 0, 0);
+}
+.task{
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid ;
+}
+.column h2{
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 2px;
+  color: goldenrod;
+  animation: glow 2s infinite;
+  text-shadow: 0 0 10px rgb(11, 161, 220);
+}
+@keyframes glow{
+  0%{
+    text-shadow: 0 0 5px rgb(98, 0, 255) , 0 0 10px rgb(0, 123, 255);
+  }
+  50%{
+    text-shadow: 0 0 5px rgb(0, 255, 34) , 0 0 10px rgb(9, 255, 0);
+  }
+  100%{
+    text-shadow: 0 0 5px red , 0 0 10px red;
+  }
+}
+#trash{
+   background: #7c7c941d;
+  backdrop-filter:'60px';
+    box-shadow:10px 10px 50px 2px rgb(255, 255, 255);
+  border-radius: 8px;
+  border: 2px dotted red;
+  padding: 10px;
+  width: 100px;
+  min-height: 300px;
+}
+.task{
+background: rgba(0,0,0,0.4);
+  border: 1px solid rgba(0,255,255,0.4);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  cursor: grab;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,255,255,0.2);
+}
+
+.task:hover{
+  background: rgba(0,83,83,0.383);
+ box-shadow: 0 4px 15px rgba(0,255,255,0.2);
+ transform: translateY(-3px);
+}
+
+.task_form{
+  height: 32px;
+  width: 300px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 50px;
+ box-shadow: 2px 2px 8px 0 #ffffff73;
+}
+h1{
+  text-align: center;
+  color: #000000a5;
+  text-shadow: 2px 2px 4px #fdc6c6a5;
+
+}
+
+input{
+  text-align: center;
+  
+  gap: 6px;
+  margin-left: 50px;
+  
+}
+/* 
+ .task:active {
+  cursor: grabbing;
+  background: #e0e0e0;
+}
+
+
+
+.input .add{
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 50px;
+  padding: 7px;
+width: 50px;
+
+ box-shadow: 2px 2px 8px 0 #f68f8fa1;
+}
+.column-trash{
+  background-color: rgba(254, 75, 75, 0.242);
+  width: 100px;
+  border: dashed red;
+}  */
