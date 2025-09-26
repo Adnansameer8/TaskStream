@@ -18,13 +18,14 @@ function TakeInput(){
     setText(' ');
   };
   return(
-    <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-          <form className="task_form" onSubmit={handleSubmit}>
+    <div className='INPUT_ADD' style={{display:'flex',justifyContent:'center',alignItems:'center',justifyContent:'center'}}>
+          <form onSubmit={handleSubmit}>
       <input type='text'
+      className='INPUT'
       value={text}
       onChange={(e)=> setText(e.target.value)}
       placeholder='ADD NEW TASK....'/>
-      <button type='submit'>Add</button>
+      <button className='ADD' type='submit'>Add</button>
     </form>
     </div>
   )
@@ -32,7 +33,7 @@ function TakeInput(){
 export default function Board(){
     const {state} = useBoard();
   return (
-   <> <h1>KANBAN BOARD</h1>
+   <> <h1>TaskStream</h1>
     <TakeInput/>
     <div className='board'>
       {Object.values(state.columns).map((col)=>(

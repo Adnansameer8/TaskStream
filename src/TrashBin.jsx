@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useBoard } from "./BoardContext";
 
+
 export default function TrashBin(){
     const {dispatch}=useBoard();
 
@@ -22,9 +23,10 @@ export default function TrashBin(){
 
     return(
         <div className="trash-bin"
+             
             onDrop={handleDrop}
             onDragOver={handleDragOver}>
-                <p>Drop here</p>
+                <p>🗑️ Discard Bin</p>
         </div>
     )
 };
