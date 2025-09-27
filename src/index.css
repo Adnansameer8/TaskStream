@@ -1,6 +1,6 @@
 body{
   margin: 0px;
-  background: linear-gradient( #194229 7%, #5ec227 100%);
+  background: linear-gradient( #11112d 7%, #5e548e 100%);
 
 }
 
@@ -25,7 +25,7 @@ body{
   text-shadow:0px 5px 12px #ff0015 ;
 }
 .column{
-   max-width:200px;;
+   max-width:200px;
   min-height: 250px;
 }
 .column,.trash-bin {
