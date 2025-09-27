@@ -3,10 +3,10 @@ import React from "react";
 export const initialBoard = {
     columns: {
         todo: {
-            id: "todo", title: "To DO", tasks: []
+            id: "todo", title: "TO DO", tasks: []
         },
-        progress: { id: "progress", title: "In Progress", tasks: [] },
-        done: { id: "done", title: "Done", tasks: [] },
+        progress: { id: "progress", title: "IN PROGRESS", tasks: [] },
+        done: { id: "done", title: "DONE", tasks: [] },
       
 
 
@@ -65,6 +65,7 @@ export function boardReducer(state, action) {
                 }
             }
         };
+        
         default:
             return state;
 

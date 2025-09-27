@@ -1,6 +1,7 @@
 body{
   margin: 0px;
-  background: linear-gradient( #6a7176 0%, #2f3841 100%);
+  background: linear-gradient( #231942 7%, #5e548e 100%);
+
 }
 
 .board {
@@ -8,37 +9,40 @@ body{
   justify-content: center;
   gap: 2rem;
   padding: 2rem;
-  justify-content: space-around;
-  margin-top: 60px;
+  justify-content: space-evenly;
+  margin-top: 40px;
 }
 .trash-bin{
    max-width:120px;;
   min-height: 300px;
   border: dotted red;
 }
-.column{
-   max-width:300px;;
+.trash-bin:hover{
+    max-width:120px;;
   min-height: 300px;
+  border: dashed red;
+  box-shadow: 0px 5px 12px #c77dff;
+  text-shadow:0px 5px 12px #ff0015 ;
+}
+.column{
+   max-width:200px;;
+  min-height: 250px;
 }
 .column,.trash-bin {
   flex: 1;
-  background: #e6e6ec8c;
-  backdrop-filter:blur(200px) saturate(180%);
+  background: #5e54927d;
+  backdrop-filter:blur(100px) saturate(180%);
   -webkit-backdrop-filter: blur(200px) saturate(180%);
 
   border-radius: 20px;
   padding: 1.5rem;
-  transition: transform 2s ease, box-shadow 2s ease;
+  transition: transform 2s ease, box-shadow 3s ease;
 }
 .column:hover{
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 14px 80px rgba(250, 1, 1, 0.783);
+  box-shadow: 0 14px 50px #e7c6ff;
 }
-.task{
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid ;
-  
-}
+
 .column h2{
   margin: 0 0 1rem;
   font-size: 1.5rem;
@@ -48,84 +52,168 @@ body{
   animation: glow 2s infinite;
   text-shadow: 0 0 10px rgb(220, 11, 11);
 }
-@keyframes glow{
-  0%{
-    text-shadow: 0 0 5px rgba(205, 67, 67, 0.596) , 0 0 10px rgb(129, 7, 146);
-  }
-  50%{
-    text-shadow: 0 0 5px rgb(159, 30, 30) , 0 0 10px rgb(177, 33, 33);
-  }
-  100%{
-    text-shadow: 0 0 5px rgb(161, 63, 86) , 0 0 10px rgb(157, 26, 197);
-  }
-}
+
 
 .task{
-background: rgba(214, 188, 188, 0.219);
-  border: 1px solid rgba(165, 227, 227, 0.4);
-  padding: 1rem;
+background:  #e7c6ff;
+  border: 1px solid #3c096c;
+  padding: 0.5rem;
   border-radius: 12px;
   margin-bottom: 1rem;
   cursor: grab;
-  color: #000000;
+  color: #240046;
   font-size: 22px;
   letter-spacing: 1px;
   transition: all 1s ease;
-  box-shadow: 0 4px 15px rgba(255, 69, 69, 0.468);
+  box-shadow: 0 4px 15px #e0aaff;
 }
 
 .task:hover{
   background: rgba(255, 255, 255, 0.658);
- box-shadow: 0 4px 15px rgba(255, 0, 0, 0.829);
+ box-shadow: 0 4px 30px #9d4edd;
  transform: translateY(-3px);
  color: black;
 }
 
 .INPUT{
-  height: 32px;
+  height: 42px;
   width: 300px;
-  background-color: #e0e0e0;
+  background-color: #e0aaff;
   border: none;
   border-radius: 50px;
- box-shadow: 2px 2px 8px 0 #ff000073;
+ box-shadow: 2px 2px 8px 0 #c77dff;
 }
 h1{
   text-align: center;
   color: #ffffffa5;
-  text-shadow: 2px 2px 4px #ff0000b7;
+  text-shadow: 2px 2px 4px #e0aaff;
   font-size: 50px;
 
 }
 .ADD{
+  margin-top: 2px;
   
-    height: 32px;
-  background-color: #4a4545;
+    height: 42px;
+    width: 80px;
+  background-color: #d7aed7;
+  text-shadow: 2px 2px 4px #90dbf4;
   border: none;
+  font-size: 1.5rem;
   border-radius: 50px;
- box-shadow: 2px 2px 8px 0 #1f1b1b73;
- color:rgb(255, 175, 175);
+ color:rgb(53, 36, 36);
  margin-left: 8px;
   letter-spacing: 1px;
   transition: all 1.5s ease;
-  box-shadow: 0 4px 15px rgba(210, 207, 53, 0.2);
+  animation: glow 3s infinite;
+  box-shadow: 0 4px 9px #c77dff;
 }
 .ADD:hover{
   
-    height: 32px;
-  background-color: #4a4545;
+    height: 42px;
+  background-color: #cfbaf0;
   border: none;
+  font-weight: 8px;
   border-radius: 50px;
- box-shadow: 2px 2px 8px 0 #f3efef73;
- color:rgb(66, 214, 231);
+ box-shadow: 2px 2px 8px 0 #3c096c;
+ color:#3c096c;
  margin-left: 4px;
-  box-shadow: 0 4px 15px rgba(138, 2, 25, 0.61);
+  box-shadow: 0 4px 14px #9d4edd;
  transform: translateX(-3px);
 }
+@keyframes glow{
+  0%{
+    text-shadow: 0 0 5px #8ea6f5 , 0 0 10px #ffd6ff;
+  }
+  50%{
+    text-shadow: 0 0 5px #5a189a , 0 0 10px #3c096c;
+  }
+  100%{
+    text-shadow: 0 0 5px #ffd6ff , 0 0 10px #8eecf5;
+  }
+}
+
 .INPUT_ADD{
   display: flex;
-  
-
 }
 .trash-bin{
-  background-color: whitesmoke;
+  background-color: linear-gradient( #c77dff33 9%, #5e548e 100%);
+}
+/* ---------------- Responsive Design ---------------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .board {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .column, .trash-bin {
+    max-width: 45%;
+    min-height: 250px;
+  }
+
+  .INPUT {
+    width: 250px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .board {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column, .trash-bin {
+    max-width: 90%;
+    min-height: 220px;
+  }
+
+  .INPUT {
+    width: 200px;
+  }
+
+  .ADD {
+    font-size: 14px;
+    padding: 0 12px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .task {
+    font-size: 18px;
+    padding: 0.8rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .INPUT_ADD {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .INPUT {
+    width: 90%;
+    margin-bottom: 8px;
+  }
+
+  .ADD {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .task {
+    font-size: 16px;
+  }
 }

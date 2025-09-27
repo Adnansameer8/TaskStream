@@ -33,7 +33,7 @@ function TakeInput(){
 export default function Board(){
     const {state} = useBoard();
   return (
-   <> <h1>TaskStream</h1>
+   <> <h1>Task Streamer</h1>
     <TakeInput/>
     <div className='board'>
       {Object.values(state.columns).map((col)=>(

@@ -1,45 +1,254 @@
-import React from 'react'
+// import React from 'react'
 
-const Kanban = () => {
-  return (
-    <div>
-      <h1 style={{
-        marginTop:'4px',
-        color:'brown',
-        fontSize:'2rem',
-        textAlign:'center'
-      }}>KANBAN BOARD</h1>
-     <div style={{
-        display:'flex',
-        justifyContent:'center',
-        gap:'6px'
-     }}>
-         <input type="text" placeholder='  Add New Task ' style={{
-        width:'460px',
-        height:'30px',
-       borderRadius:'50px',
-       border:'none',
-       boxShadow:'0px 0px 8px rgba(0, 0, 0, 0.3)',
-       backgroundColor:'rgba(255, 255, 255, 0.73)'
+// const Kanban = () => {
+//   return (
+//     <div>
+//       <h1 style={{
+//         marginTop:'4px',
+//         color:'brown',
+//         fontSize:'2rem',
+//         textAlign:'center'
+//       }}>KANBAN BOARD</h1>
+//      <div style={{
+//         display:'flex',
+//         justifyContent:'center',
+//         gap:'6px'
+//      }}>
+//          <input type="text" placeholder='  Add New Task ' style={{
+//         width:'460px',
+//         height:'30px',
+//        borderRadius:'50px',
+//        border:'none',
+//        boxShadow:'0px 0px 8px rgba(0, 0, 0, 0.3)',
+//        backgroundColor:'rgba(255, 255, 255, 0.73)'
 
 
-      }} />
-      <button style={{backgroundColor:'rgba(255, 255, 255, 0.73)',
-        border:'none',
-        boxShadow:'0px 0px 8px rgba(255, 19, 19, 1)',
-        borderRadius:'50px'
-      }}>Add</button>
-     </div>
+//       }} />
+//       <button style={{backgroundColor:'rgba(255, 255, 255, 0.73)',
+//         border:'none',
+//         boxShadow:'0px 0px 8px rgba(255, 19, 19, 1)',
+//         borderRadius:'50px'
+//       }}>Add</button>
+//      </div>
      
-        <div style={{backgroundColor:'rgba(130, 62, 62, 0.73)',height:'600px',width:'100%',marginTop:'30px'}}>
-        <div>To Do</div>
-        <div>In Progress</div>
-        <div>Done</div>
-        <div>🚮<br />Trash Bin</div>
-        </div>
+//         <div style={{backgroundColor:'rgba(130, 62, 62, 0.73)',height:'600px',width:'100%',marginTop:'30px'}}>
+//         <div>To Do</div>
+//         <div>In Progress</div>
+//         <div>Done</div>
+//         <div>🚮<br />Trash Bin</div>
+//         </div>
      
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default Kanban
+// export default Kanban
+// body{
+//   margin: 0px;
+//   /* background: linear-gradient( #6a7176 0%, #2f3841 100%); */
+//   background-color: yellow;
+// }
+
+// .board {
+//   display: flex;
+//   justify-content: center;
+//   gap: 2rem;
+//   padding: 2rem;
+//   justify-content: space-around;
+//   margin-top: 60px;
+// }
+// .trash-bin{
+//    max-width:120px;;
+//   min-height: 300px;
+//   border: dotted red;
+// }
+// .column{
+//    max-width:300px;;
+//   min-height: 300px;
+// }
+// .column,.trash-bin {
+//   flex: 1;
+//   background: rgba(255, 0, 0, 0.92);
+//   backdrop-filter:blur(200px) saturate(180%);
+//   -webkit-backdrop-filter: blur(200px) saturate(180%);
+
+//   border-radius: 20px;
+//   padding: 1.5rem;
+//   transition: transform 2s ease, box-shadow 2s ease;
+// }
+// .column:hover{
+//   transform: translateY(-5px) scale(1.02);
+//   box-shadow: 0 14px 80px rgb(250, 1, 1);
+// }
+// .task{
+//   background: rgba(0, 0, 0, 0.4);
+//   border: 1px solid ;
+  
+// }
+// .column h2{
+//   margin: 0 0 1rem;
+//   font-size: 1.5rem;
+//   text-align: center;
+//   letter-spacing: 2px;
+//   color: rgb(255, 255, 255);
+//   animation: glow 2s infinite;
+//   text-shadow: 0 0 10px rgb(220, 11, 11);
+// }
+// @keyframes glow{
+//   0%{
+//     text-shadow: 0 0 5px rgba(205, 67, 67, 0.596) , 0 0 10px rgb(129, 7, 146);
+//   }
+//   50%{
+//     text-shadow: 0 0 5px rgb(159, 30, 30) , 0 0 10px rgb(177, 33, 33);
+//   }
+//   100%{
+//     text-shadow: 0 0 5px rgb(161, 63, 86) , 0 0 10px rgb(157, 26, 197);
+//   }
+// }
+
+// .task{
+// background: rgba(214, 188, 188, 0.219);
+//   border: 1px solid rgba(165, 227, 227, 0.4);
+//   padding: 1rem;
+//   border-radius: 12px;
+//   margin-bottom: 1rem;
+//   cursor: grab;
+//   color: #000000;
+//   font-size: 22px;
+//   letter-spacing: 1px;
+//   transition: all 1s ease;
+//   box-shadow: 0 4px 15px rgba(255, 69, 69, 0.468);
+// }
+
+// .task:hover{
+//   background: rgba(255, 255, 255, 0.658);
+//  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.829);
+//  transform: translateY(-3px);
+//  color: black;
+// }
+
+// .INPUT{
+//   height: 32px;
+//   width: 300px;
+//   background-color: #e0e0e0;
+//   border: none;
+//   border-radius: 50px;
+//  box-shadow: 2px 2px 8px 0 #ff000073;
+// }
+// h1{
+//   text-align: center;
+//   color: #ffffffa5;
+//   text-shadow: 2px 2px 4px #ff0000b7;
+//   font-size: 50px;
+
+// }
+// .ADD{
+  
+//     height: 32px;
+//   background-color: #4a4545;
+//   border: none;
+//   border-radius: 50px;
+//  box-shadow: 2px 2px 8px 0 #1f1b1b73;
+//  color:rgb(255, 175, 175);
+//  margin-left: 8px;
+//   letter-spacing: 1px;
+//   transition: all 1.5s ease;
+//   box-shadow: 0 4px 15px rgba(210, 207, 53, 0.2);
+// }
+// .ADD:hover{
+  
+//     height: 32px;
+//   background-color: #4a4545;
+//   border: none;
+//   border-radius: 50px;
+//  box-shadow: 2px 2px 8px 0 #f3efef73;
+//  color:rgb(66, 214, 231);
+//  margin-left: 4px;
+//   box-shadow: 0 4px 15px rgba(138, 2, 25, 0.61);
+//  transform: translateX(-3px);
+// }
+// .INPUT_ADD{
+//   display: flex;
+// }
+// .trash-bin{
+//   background-color: whitesmoke;
+// }
+// /* ---------------- Responsive Design ---------------- */
+
+// /* Tablets */
+// @media (max-width: 1024px) {
+//   .board {
+//     flex-wrap: wrap;
+//     gap: 1.5rem;
+//   }
+
+//   .column, .trash-bin {
+//     max-width: 45%;
+//     min-height: 250px;
+//   }
+
+//   .INPUT {
+//     width: 250px;
+//   }
+
+//   h1 {
+//     font-size: 40px;
+//   }
+// }
+
+// /* Mobile */
+// @media (max-width: 768px) {
+//   .board {
+//     flex-direction: column;
+//     align-items: center;
+//   }
+
+//   .column, .trash-bin {
+//     max-width: 90%;
+//     min-height: 220px;
+//   }
+
+//   .INPUT {
+//     width: 200px;
+//   }
+
+//   .ADD {
+//     font-size: 14px;
+//     padding: 0 12px;
+//   }
+
+//   h1 {
+//     font-size: 32px;
+//   }
+
+//   .task {
+//     font-size: 18px;
+//     padding: 0.8rem;
+//   }
+// }
+
+// /* Small Mobile */
+// @media (max-width: 480px) {
+//   .INPUT_ADD {
+//     flex-direction: column;
+//     align-items: center;
+//   }
+
+//   .INPUT {
+//     width: 90%;
+//     margin-bottom: 8px;
+//   }
+
+//   .ADD {
+//     width: 90%;
+//     margin-left: 0;
+//   }
+
+//   h1 {
+//     font-size: 26px;
+//   }
+
+//   .task {
+//     font-size: 16px;
+//   }
+// }
