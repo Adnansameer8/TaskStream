@@ -7,7 +7,7 @@ import TrashBin from '../TrashBin';
 
 function TakeInput(){
   const{ dispatch }=useContext(BoardContext);
-  const [text,setText]=useState(' ');
+  const [text,setText]=useState('');
 
   const handleSubmit = (e) =>{
     e.preventDefault();
@@ -24,7 +24,7 @@ function TakeInput(){
       className='INPUT'
       value={text}
       onChange={(e)=> setText(e.target.value)}
-      placeholder='ADD NEW TASK....'/>
+      placeholder='   Track Your Tasks, Reach Your Goals.'/>
       <button className='ADD' type='submit'>Add</button>
     </form>
     </div>
