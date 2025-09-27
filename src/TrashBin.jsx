@@ -11,7 +11,6 @@ export default function TrashBin() {
     const sourceCol = e.dataTransfer.getData("sourceCol");
 
     if (task && sourceCol) {
-      // instead of deleting → open confirmation popup
       setConfirmData({ task, sourceCol });
     }
   };
@@ -23,12 +22,12 @@ export default function TrashBin() {
   const confirmDelete = () => {
     if (confirmData) {
       dispatch({ type: "DELETE_TASK", payload: confirmData });
-      setConfirmData(null); // close popup
+      setConfirmData(null); 
     }
   };
 
   const cancelDelete = () => {
-    setConfirmData(null); // just close popup
+    setConfirmData(null); 
   };
 
   return (
