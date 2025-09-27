@@ -23,10 +23,14 @@ body{
   border: dashed red;
   box-shadow: 0px 5px 12px #c77dff;
   text-shadow:0px 5px 12px #ff0015 ;
+  animation: glowBIN 4s infinite;
 }
 .column{
    max-width:200px;
   min-height: 250px;
+ overflow-wrap: break-word; /* ensures long text breaks into new lines */
+  word-wrap: break-word;
+  word-break: break-word;
 }
 .column,.trash-bin {
   flex: 1;
@@ -119,6 +123,19 @@ h1{
  margin-left: 4px;
   box-shadow: 0 4px 14px #9d4edd;
  transform: translateX(-3px);
+}
+
+
+@keyframes glowBIN{
+  0%{
+    text-shadow: 0 0 5px #ff0000bb , 0 0 10px #ff000063;
+  }
+  50%{
+    text-shadow: 0 0 5px #ff00001d , 0 0 10px #8401ff5f;
+  }
+  100%{
+    text-shadow: 0 0 5px #4c00ff8e , 0 0 10px #0066ff97;
+  }
 }
 @keyframes glow{
   0%{
