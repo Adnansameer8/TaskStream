@@ -18,7 +18,7 @@ function TakeInput(){
     setText(' ');
   };
   return(
-    <div className='INPUT_ADD' style={{display:'flex',justifyContent:'center',alignItems:'center',justifyContent:'center'}}>
+    <div className='INPUT_ADD' style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
           <form onSubmit={handleSubmit}>
       <input type='text'
       className='INPUT'
